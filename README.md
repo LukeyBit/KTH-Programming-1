@@ -39,7 +39,7 @@ We encourage students to contribute to this repository and make it a valuable re
 
 - Report issues: If you encounter any bugs, issues, or have suggestions for improvements, please [submit an issue](https://github.com/LukeyBit/KTH-Programming-1/issues).
 
-- Contribute code: If you have enhancements or fixes for existing assignments, or if you'd like to contribute a new assignment, please follow the guidelines in our [Contribution Guide](CONTRIBUTING.md).
+- Contribute code: If you have enhancements or fixes for existing assignments, or if you'd like to contribute a new assignment, please follow the guidelines in our [Contribution Guide](.github/CONTRIBUTING.md).
 
 ## Code of Conduct
 
