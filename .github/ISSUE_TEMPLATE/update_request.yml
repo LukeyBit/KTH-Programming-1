@@ -1,7 +1,7 @@
 name: Update Request
 description: Suggest a change to the project
 title: "[Update]: "
-labels: ["Update", "triage"]
+labels: ["update", "triage"]
 assignees:
   - octocat
 body:
