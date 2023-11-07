@@ -1,0 +1,20 @@
+name: Visualize
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  visualize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Run repo-visualizer
+        uses: githubocto/repo-visualizer@main
+        with:
+          output_file: "./.github/images/diagram.svg"
+          excluded_paths: "ignore,.github,LICENSE,.gitignore,"
+          excluded_globs: "**/*.{png,ico,md,svg};"
