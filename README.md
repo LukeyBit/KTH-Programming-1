@@ -37,7 +37,7 @@ Work in Progress
 
 We encourage students to contribute to this repository and make it a valuable resource for everyone. You can help in the following ways:
 
-- Report issues: If you encounter any bugs, issues, or have suggestions for improvements, please [submit an issue](https://github.com/your-username/KTH-Programming-1/issues).
+- Report issues: If you encounter any bugs, issues, or have suggestions for improvements, please [submit an issue](https://github.com/LukeyBit/KTH-Programming-1/issues).
 
 - Contribute code: If you have enhancements or fixes for existing assignments, or if you'd like to contribute a new assignment, please follow the guidelines in our [Contribution Guide](CONTRIBUTING.md).
 
