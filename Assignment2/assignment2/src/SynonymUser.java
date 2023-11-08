@@ -13,49 +13,55 @@ Author: Fadil Galjic
 
 ****************************************************************/
 
-import java.io.*;  // IOException
+import java.io.*; // IOException
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 import static java.lang.System.out;
 
-class SynonymUser
-{
-    public static void main (String[] args) throws IOException
-    {
-        String[] synonymData = SynonymHandler.readSynonymData(
-			"SynonymData1.txt");
+class SynonymUser {
+    public static void main(String[] args) throws IOException {
+        String[] synonymData = SynonymHandler.readSynonymData("SynonymData1.txt");
+
         println(synonymData);
 
-        String synonymLine = SynonymHandler.getSynonymLine(
-			synonymData, "beautiful");
+        String synonymLine = SynonymHandler.getSynonymLine(synonymData, "beautiful");
+
         out.println(synonymLine + "\n");
-        synonymLine =
-            "glowing | luminous, vibrant, flaming, gleaming";
-        synonymData = SynonymHandler.addSynonymLine(
-			synonymData, synonymLine);
+
+        synonymLine = "glowing | luminous, vibrant, flaming, gleaming";
+
+        synonymData = SynonymHandler.addSynonymLine(synonymData, synonymLine);
+
         println(synonymData);
-        synonymData = SynonymHandler.removeSynonymLine(
-			synonymData, "clever");
+
+        synonymData = SynonymHandler.removeSynonymLine(synonymData, "clever");
+
         println(synonymData);
-        SynonymHandler.addSynonym(synonymData, "powerful",
-            "briliant");
+
+        SynonymHandler.addSynonym(synonymData, "powerful","briliant");
+
         println(synonymData);
-        SynonymHandler.removeSynonym(synonymData, "merciful",
-            "gracious");
-        SynonymHandler.removeSynonym(synonymData, "powerful",
-            "briliant");
-        SynonymHandler.removeSynonym(synonymData, "beautiful",
-            "pleasing");
+
+        SynonymHandler.removeSynonym(synonymData, "merciful","gracious");
+
+        SynonymHandler.removeSynonym(synonymData, "powerful","briliant");
+
+        SynonymHandler.removeSynonym(synonymData, "beautiful","pleasing");
+
         println(synonymData);
+
         SynonymHandler.sortSynonymData(synonymData);
+
         println(synonymData);
 
         SynonymHandler.writeSynonymData(synonymData,
-            "SynonymData2.txt");
+                "SynonymData2.txt");
     }
 
-    public static void println (String[] synonymData)
-    {
+    public static void println(String[] synonymData) {
         for (String synonymLine : synonymData)
             out.println(synonymLine);
         out.println("");
-	}
+    }
 }
