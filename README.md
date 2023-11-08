@@ -19,10 +19,13 @@ Completed
 
 **Description:**
 
-Assignment 2, named "Synonyms," focuses on string handling in Java. This assignment is an opportunity to enhance your Java programming capabilities and practice advanced string manipulation.
+Assignment 2, named "Synonyms," focuses on string handling in Java. This assignment is an opportunity to enhance your Java programming capabilities and practice advanced string manipulation as well as sorting using the selection sort algorithm.
 
-**Status:** 
-Work in Progress
+**Note:**
+When running the program, make sure to be located in the src directory. Otherwise, the program will not be able to find the text files. For example, if you are using the command line, navigate to the src directory and run the following command: `java SynonymUser.java`.
+
+**Status:**
+Completed
 
 ## Assignment 3: (Coming Soon)
 
