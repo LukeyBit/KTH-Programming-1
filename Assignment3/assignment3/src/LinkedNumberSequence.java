@@ -61,75 +61,164 @@ public class LinkedNumberSequence implements NumberSequence
 
 	@Override
 	public int length() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'length'");
+		boolean hasNext = true;
+		int length = 0;
+		Node n = first;
+		while (hasNext) {
+			length++;
+			if (n.next == null) {
+				hasNext = false;
+			} else {
+				n = n.next;
+			}
+		}
+		return length;
 	}
 
 	@Override
 	public double upperBound() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'upperBound'");
+		if (isDecreasing()) {
+			return first.number;
+		} else {
+			double max = first.number;
+			Node n = first;
+			while (n != null) {
+				if (n.number > max) {
+					max = n.number;
+				}
+				n = n.next;
+			}
+			return max;
+		}
 	}
 
 	@Override
 	public double lowerBound() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'lowerBound'");
+		if (isIncreasing()) {
+			return first.number;
+		} else {
+			double min = first.number;
+			Node n = first;
+			while (n != null) {
+				if (n.number < min) {
+					min = n.number;
+				}
+				n = n.next;
+			}
+			return min;
+		}
 	}
 
 	@Override
 	public double numberAt(int position) throws IndexOutOfBoundsException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'numberAt'");
+		if (position < 0 || position >= length()) {
+			throw new IndexOutOfBoundsException("Position " + position + " is out of bounds");
+		}
+		Node n = first;
+		for (int i = 0; i < position; i++) {
+			n = n.next;
+		}
+		return n.number;
 	}
 
 	@Override
 	public int positionOf(double number) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'positionOf'");
+		Node n = first;
+		for (int i = 0; i < length(); i++) {
+			if (n.number == number) {
+				return i;
+			}
+			n = n.next;
+		}
+		return -1;
 	}
 
 	@Override
 	public boolean isIncreasing() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'isIncreasing'");
+		Node n = first;
+		while (n.next != null) {
+			if (n.number > n.next.number) {
+				return false;
+			}
+			n = n.next;
+		}
+		return true;
 	}
 
 	@Override
 	public boolean isDecreasing() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'isDecreasing'");
+		Node n = first;
+		while (n.next != null) {
+			if (n.number < n.next.number) {
+				return false;
+			}
+			n = n.next;
+		}
+		return true;
 	}
 
 	@Override
 	public boolean contains(double number) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'contains'");
+		Node n = first;
+		for (int i = 0; i < length(); i++) {
+			if (n.number == number) {
+				return true;
+			}
+			n = n.next;
+		}
+		return false;
 	}
 
 	@Override
 	public void add(double number) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'add'");
+		Node n = first;
+		for (int i = 0; i < length(); i++) {
+			if (n.next == null) {
+				n.next = new Node(number);
+				return;
+			}
+			n = n.next;
+		}
 	}
 
 	@Override
 	public void insert(int position, double number) throws IndexOutOfBoundsException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'insert'");
+		if (position < 0 || position > length()-1){
+			throw new IndexOutOfBoundsException("Position " + position + " is out of bounds");
+		} else {
+			Node n = first;
+			for (int i = 1; i < position; i++) {
+				n = n.next;
+			}
+			Node newNode = new Node(number);
+			newNode.next = n.next;
+			n.next = newNode;
+		}
 	}
 
 	@Override
 	public void removeAt(int position) throws IndexOutOfBoundsException, IllegalStateException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'removeAt'");
+		if (position < 0 || position > length()-1){
+			throw new IndexOutOfBoundsException("Position " + position + " is out of bounds");
+		} else if (length() < 3) {
+			throw new IllegalStateException("There must be at least two numbers in the sequence");
+		} else {
+			Node n = first;
+			for (int i = 1; i < position; i++) {
+				n = n.next;
+			}
+			n.next = n.next.next;
+		}
 	}
 
 	@Override
 	public double[] asArray() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'asArray'");
+		double[] array = new double[length()];
+		Node n = first;
+		for (int i = 0; i < length(); i++) {
+			array[i] = n.number;
+			n = n.next;
+		}
+		return array;
 	}
-
-    // add code here
 }
