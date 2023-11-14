@@ -10,7 +10,7 @@ Welcome to the repository for the completed programming assignments for the "Pro
 
 **Description:**
 
-Assignment 1, named "Temperatures," delves into Java programming for making temperature calculations. This assignment is designed to strengthen your Java skills and your understanding of basic mathematical operations in Java.
+Assignment 1, named "Temperatures", delves into Java programming for making temperature calculations. This assignment is designed to strengthen your Java skills and your understanding of basic mathematical operations in Java.
 
 **Status:**
 Completed
@@ -19,7 +19,7 @@ Completed
 
 **Description:**
 
-Assignment 2, named "Synonyms," focuses on string handling in Java. This assignment is an opportunity to enhance your Java programming capabilities and practice advanced string manipulation as well as sorting using the selection sort algorithm.
+Assignment 2, named "Synonyms", focuses on string handling in Java. This assignment is an opportunity to enhance your Java programming capabilities and practice advanced string manipulation as well as sorting using the selection sort algorithm.
 
 **Note:**
 When running the program, make sure to be located in the src directory. Otherwise, the program will not be able to find the text files. For example, if you are using the command line, navigate to the src directory and run the following command: `java SynonymUser.java`.
@@ -27,14 +27,14 @@ When running the program, make sure to be located in the src directory. Otherwis
 **Status:**
 Completed
 
-## Assignment 3: (Coming Soon)
+## Assignment 3: Number sequence
 
 **Description:**
 
-Assignment 3 has not yet been added to this repository.
+Assignment 3, named "Number sequence", is focused on handling arrays as well as linked objects and classes in Java. It features implementing a interface and using both an array as well as linked objects to store and handle the data. The assignment also has some elements of error handling. This assignment is an opportunity to learn about interfaces, arrays, linked objects, and classes in Java.
 
 **Status:**
-Work in Progress
+Completed
 
 ## Contributing
 
