@@ -26,7 +26,6 @@ class NumberSequenceTest
         out.println(sequence);
         out.println();
 
-        // add code here
         out.println("length: " + sequence.length());
         out.println("one upper bound: " + sequence.upperBound());
         out.println("one lower bound: " + sequence.lowerBound());
