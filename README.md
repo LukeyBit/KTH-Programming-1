@@ -56,7 +56,7 @@ If you are a student looking to use these assignments as a guide, follow these s
 
     `git clone https://github.com/LukeyBit/KTH-Programming-1.git`
 
-2. Browse the respective assignment directories (e.g., `Assignment1` and `Assignment2`). To find the Java source code and associated files for each assignment. The source code is located in the src directory.
+2. Browse the respective assignment directories (e.g., `Assignment1`, `Assignment2` and `Assignment2`). To find the Java source code and associated files for each assignment. The source code is located in the src directory.
 
 ## Prerequisites
 
