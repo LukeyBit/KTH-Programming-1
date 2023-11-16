@@ -48,36 +48,24 @@ public class ArrayNumberSequence implements NumberSequence
 
 	@Override
 	public double upperBound() {
-		if (isDecreasing()){
-			return numbers[0];
-		} else if (isIncreasing()) {
-			return numbers[numbers.length - 1];
-		} else {
-			double max = numbers[0];
-			for (double number : numbers) {
-				if (number > max) {
-					max = number;
-				}
+		double max = numbers[0];
+		for (double number : numbers) {
+			if (number > max) {
+				max = number;
 			}
-			return max;
 		}
+		return max;
 	}
 
 	@Override
 	public double lowerBound() {
-		if (isIncreasing()) {
-			return numbers[0];
-		} else if (isDecreasing()){
-			return numbers[numbers.length - 1];
-		} else {
-			double min = numbers[0];
-			for (double number : numbers) {
-				if (number < min) {
-					min = number;
-				}
+		double min = numbers[0];
+		for (double number : numbers) {
+			if (number < min) {
+				min = number;
 			}
-			return min;
 		}
+		return min;
 	}
 
 	@Override

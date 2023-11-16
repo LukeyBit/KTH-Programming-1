@@ -77,36 +77,28 @@ public class LinkedNumberSequence implements NumberSequence
 
 	@Override
 	public double upperBound() {
-		if (isDecreasing()) {
-			return first.number;
-		} else {
-			double max = first.number;
-			Node n = first;
-			while (n != null) {
-				if (n.number > max) {
-					max = n.number;
-				}
-				n = n.next;
+		double max = first.number;
+		Node n = first;
+		while (n != null) {
+			if (n.number > max) {
+				max = n.number;
 			}
-			return max;
+			n = n.next;
 		}
+		return max;
 	}
 
 	@Override
 	public double lowerBound() {
-		if (isIncreasing()) {
-			return first.number;
-		} else {
-			double min = first.number;
-			Node n = first;
-			while (n != null) {
-				if (n.number < min) {
-					min = n.number;
-				}
-				n = n.next;
+		double min = first.number;
+		Node n = first;
+		while (n != null) {
+			if (n.number < min) {
+				min = n.number;
 			}
-			return min;
+			n = n.next;
 		}
+		return min;
 	}
 
 	@Override
