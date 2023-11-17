@@ -2,6 +2,10 @@
 
 Welcome to the repository for the completed programming assignments for the "Programming 1" course in Object-Oriented Programming (OOP) at the Royal Institute of Technology (KTH) for the period two of the fall of 2023. In this course, we explore fundamental OOP concepts and practice Java programming.
 
+## Approved
+
+The code in this repository has been controlled and improved by the teacher of the course.
+
 ## Code overview
 
 ![Visualization of this repo](./.github/images/diagram.svg)
