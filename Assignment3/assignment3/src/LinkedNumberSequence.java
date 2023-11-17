@@ -177,15 +177,21 @@ public class LinkedNumberSequence implements NumberSequence
 	public void insert(int position, double number) throws IndexOutOfBoundsException {
 		if (position < 0 || position > length()-1){
 			throw new IndexOutOfBoundsException("Position " + position + " is out of bounds");
+		}
+		Node newNode = new Node(number);
+
+		if (position == 0) {
+			newNode.next = first;
+			first = newNode;
 		} else {
 			Node n = first;
 			for (int i = 1; i < position; i++) {
 				n = n.next;
 			}
-			Node newNode = new Node(number);
 			newNode.next = n.next;
 			n.next = newNode;
 		}
+
 	}
 
 	@Override

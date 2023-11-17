@@ -81,16 +81,15 @@ class Temperatures1
 		for (int i = 1; i < nofWeeks + 1; i++){
 			minT[i] = t[i][1];
 			maxT[i] = t[i][1];
-			sumT[i] = 0;
-			for (int j = 1; j < nofMeasurementsPerWeek + 1; j++){
+			sumT[i] = t[i][1];
+			for (int j = 2; j < nofMeasurementsPerWeek + 1; j++){
 				if (t[i][j] < minT[i]) minT[i] = t[i][j];
 				if (t[i][j] > maxT[i]) maxT[i] = t[i][j];
 				sumT[i] += t[i][j];
 			}
 
 			avgT[i] = sumT[i] / nofMeasurementsPerWeek;
-
-	}
+	    }
 
 		// show the least, greatest and average temperatures
 		out.println("the least, greatest and average temperatures"
@@ -111,13 +110,11 @@ class Temperatures1
 		double maxTemp = maxT[1];
 		double sumTemp = sumT[1];
 		double avgTemp = 0;
-
-		for (int i = 2; i < nofWeeks + 1; i++){
-			if (minTemp > minT[i]) minTemp = minT[i];
-			if (maxTemp < maxT[i]) maxTemp = maxT[i];
-			sumTemp += sumT[i];
+		for (int week = 2; week <=nofWeeks; week++){
+			if (minTemp > minT[week]) minTemp = minT[week];
+			if (maxTemp < maxT[week]) maxTemp = maxT[week];
+			sumTemp += sumT[week];
 		}
-
 		avgTemp = sumTemp / (nofWeeks * nofMeasurementsPerWeek);
 
         // show the least, greatest and average temperature for
