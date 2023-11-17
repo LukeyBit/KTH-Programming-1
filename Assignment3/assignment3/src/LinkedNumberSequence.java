@@ -198,8 +198,12 @@ public class LinkedNumberSequence implements NumberSequence
 	public void removeAt(int position) throws IndexOutOfBoundsException, IllegalStateException {
 		if (position < 0 || position > length()-1){
 			throw new IndexOutOfBoundsException("Position " + position + " is out of bounds");
-		} else if (length() < 3) {
+		} 
+		if (length() < 3) {
 			throw new IllegalStateException("There must be at least two numbers in the sequence");
+		}
+		if (position == 0) {
+			first = first.next;
 		} else {
 			Node n = first;
 			for (int i = 1; i < position; i++) {
